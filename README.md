@@ -1,6 +1,6 @@
 ****************
 * Warmup Project
-* CS221 Section 
+* CS221 Section-001
 * 1/15/2024
 * Rylee Hilde
 **************** 
@@ -11,46 +11,35 @@ OVERVIEW:
  of sentences, you're going too far. The details go in other
  sections.
 
- My program will read a plain text file and determine if a 2d array cell is true or false based on the numbers given in each cell from the file.
+ My program will read a plain text file and determine if a 2d array cell is true or false based on the numbers given in each cell from the file. (make better)
 
 
 INCLUDED FILES:
-
- List the files required for the project with a brief
- explanation of why each is included.
-
- e.g.
- * Class1.java - source file
- * Class2.java - source file
- * README - this file
-
  * GridMonitor.java - source file
  * GridMonitorInterface.java - source file
  * GridMonitorTest.java - testing file
- * README - this file
- * (Make sure to add the various sample files)
-
+ * README.md - this file
+ * negatives.txt - Sample text file for negative values
+ * oneByOne.txt - Sample text file for a 1x1 2d array
+ * sample.txt - Sample text file for a 3x3 2d array
+ * sample4x5.txt - Sample text file for 4x5 2d array with varied row length
+ * sampleDouble.txt - Sample text file with double values in each cell
+ * wideRange.txt - Sample text file to test wide range values for each cell
 
 COMPILING AND RUNNING:
 
- Give the command for compiling the program, the command
- for running the program, and any usage instructions the
- user needs.
- 
- These are command-line instructions for a system like onyx.
- They have nothing to do with Eclipse or any other IDE. They
- must be specific - assume the user has Java installed, but
- has no idea how to compile or run a Java program from the
- command-line.
- 
- e.g.
  From the directory containing all source files, compile the
  driver class (and all dependencies) with the command:
- $ javac Class1.java
+
+ ```console
+ $ javac GridMonitor.java
+ ```
 
  Run the compiled class file with the command:
- $ java Class1
 
+ ```console
+ $ java GridMonitor
+```
  Console output will give the results after the program finishes.
 
 
@@ -66,6 +55,8 @@ PROGRAM DESIGN AND IMPORTANT CONCEPTS:
  explanation of the critical algorithms and object interactions that make
  up the program.
 
+ This program will take a 2d array and (finish)
+
  Explain the main responsibilities of the classes and interfaces that make
  up the program. Explain how the classes work together to achieve the program
  goals. If there are critical algorithms that a user should understand, 
@@ -74,6 +65,7 @@ PROGRAM DESIGN AND IMPORTANT CONCEPTS:
  If you were responsible for designing the program's classes and choosing
  how they work together, why did you design the program this way? What, if 
  anything, could be improved? 
+
 
 TESTING:
 

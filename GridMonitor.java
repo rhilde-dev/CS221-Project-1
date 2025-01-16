@@ -1,9 +1,19 @@
+import java.util.Scanner;
+import java.io.*;
+
 public class GridMonitor implements GridMonitorInterface {
     public static void main(String[] args) {
+        GridMonitor grid = new GridMonitor("sample.txt");
         
     }
 
-    public GridMonitor(){
+    public GridMonitor(String filename) throws FileNotFoundException{
+        
+        File file = new File(filename);
+        Scanner fileScan = new Scanner(file);
+        System.out.println(fileScan.nextLine());
+
+        fileScan.close();
 
     }
 
