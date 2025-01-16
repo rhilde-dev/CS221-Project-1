@@ -2,8 +2,14 @@ import java.util.Scanner;
 import java.io.*;
 
 public class GridMonitor implements GridMonitorInterface {
+
+    //instance variables
+    double[][] baseGrid;
+    int row = 0;
+    int col = 0;
+
     public static void main(String[] args) throws FileNotFoundException {
-        GridMonitor grid = new GridMonitor("sample.txt");
+        GridMonitor grid = new GridMonitor("oneByOne.txt");
 
     }
 
@@ -15,7 +21,7 @@ public class GridMonitor implements GridMonitorInterface {
      */
     public GridMonitor(String filename) throws FileNotFoundException{
 
-        int row = 0;
+        int count = 0;
 
         //scan file
         File file = new File(filename);
@@ -26,7 +32,9 @@ public class GridMonitor implements GridMonitorInterface {
         lineScan.useDelimiter(" ");
 
         //intialize new array with dimensions
-        int[][] array = new int[Integer.parseInt(lineScan.next())][Integer.parseInt(lineScan.next())]; 
+        row = Integer.parseInt(lineScan.next());
+        col = Integer.parseInt(lineScan.next());
+        baseGrid = new double[row][col]; 
         lineScan.close();
         
         //initialize spaces with next lines
@@ -34,15 +42,19 @@ public class GridMonitor implements GridMonitorInterface {
             Scanner arrayScan = new Scanner(fileScan.nextLine());
             arrayScan.useDelimiter(" ");
 
-            for (int i = 0; i < array[row].length; i++){
+            for (int i = 0; i < baseGrid[count].length; i++){
                 //add each number to the row
-
+                baseGrid[count][i] = Double.parseDouble(arrayScan.next());
 
             }
-
-            row++;
-
+            
+            count++;
+            arrayScan.close();
         }
+        
+        // -- test for making sure array was made correctly --
+        
+
         
         fileScan.close();
 
@@ -54,8 +66,8 @@ public class GridMonitor implements GridMonitorInterface {
      */
     @Override
     public double[][] getBaseGrid() {
-        // TODO Auto-generated method stub
-        return null;
+        //make a copy of this
+        return baseGrid;
     }
 
     /**
@@ -64,7 +76,17 @@ public class GridMonitor implements GridMonitorInterface {
      */
     @Override
     public double[][] getSurroundingSumGrid() {
-        // TODO Auto-generated method stub
+        //create new grid with same dimensions as baseGrid
+        double[][] sumGrid = new double[row][col];
+        //loop through baseGrid and make conditions for outOfBounds
+        for(int i = 0; i < baseGrid.length; i++){
+            for(int j = 0; j < baseGrid[i].length; j++){
+                if(){
+
+                }
+            }
+        }
+
         return null;
     }
 
