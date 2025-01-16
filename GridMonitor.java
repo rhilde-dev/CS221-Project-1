@@ -67,6 +67,12 @@ public class GridMonitor implements GridMonitorInterface {
     @Override
     public double[][] getBaseGrid() {
         //make a copy of this
+        double[][] baseGridCopy = new double[row][col];
+        for(int i = 0; i < baseGrid.length; i++){
+            for(int j = 0; j < baseGrid[i].length; j++){
+                baseGrid[i][j] = baseGridCopy[i][j];
+            }
+        }
         return baseGrid;
     }
 
@@ -81,9 +87,13 @@ public class GridMonitor implements GridMonitorInterface {
         //loop through baseGrid and make conditions for outOfBounds
         for(int i = 0; i < baseGrid.length; i++){
             for(int j = 0; j < baseGrid[i].length; j++){
+
+                //bounds: row < 0, col < 0, row > array length, col > array[row] length
                 if(){
 
                 }
+
+                //
             }
         }
 
