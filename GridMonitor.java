@@ -15,40 +15,46 @@ public class GridMonitor implements GridMonitorInterface {
     public static void main(String[] args) throws FileNotFoundException {
         GridMonitor grid = new GridMonitor("sample.txt");
 
-        for(int i = 0; i < grid.getBaseGrid().length; i++){
-            for(int j = 0; j < grid.getBaseGrid()[i].length; j++){
-                System.out.print(grid.getBaseGrid()[i][j] + " ");
-            }
-            System.out.println();
-        }
+        // for(int i = 0; i < grid.getBaseGrid().length; i++){
+        //     for(int j = 0; j < grid.getBaseGrid()[i].length; j++){
+        //         System.out.print(grid.getBaseGrid()[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
 
-        for(int i = 0; i < grid.getSurroundingSumGrid().length; i++){
-            for(int j = 0; j < grid.getSurroundingSumGrid()[i].length; j++){
-                System.out.print(grid.getSurroundingSumGrid()[i][j] + " ");
-            }
-            System.out.println();
-        }
+        grid.getSurroundingSumGrid();
+        grid.getSurroundingAvgGrid();
+        grid.getDeltaGrid();
+
+        // for(int i = 0; i < grid.getSurroundingSumGrid().length; i++){
+        //     for(int j = 0; j < grid.getSurroundingSumGrid()[i].length; j++){
+        //         System.out.print(grid.getSurroundingSumGrid()[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
         
-        for(int i = 0; i < grid.getSurroundingAvgGrid().length; i++){
-            for(int j = 0; j < grid.getSurroundingAvgGrid()[i].length; j++){
-                System.out.print(grid.getSurroundingAvgGrid()[i][j] + " ");
-            }
-            System.out.println();
-        }
+        // for(int i = 0; i < grid.getSurroundingAvgGrid().length; i++){
+        //     for(int j = 0; j < grid.getSurroundingAvgGrid()[i].length; j++){
+        //         System.out.print(grid.getSurroundingAvgGrid()[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
 
-        for(int i = 0; i < grid.getDeltaGrid().length; i++){
-            for(int j = 0; j < grid.getDeltaGrid()[i].length; j++){
-                System.out.print(grid.getDeltaGrid()[i][j] + " ");
-            }
-            System.out.println();
-        }
+        // for(int i = 0; i < grid.getDeltaGrid().length; i++){
+        //     for(int j = 0; j < grid.getDeltaGrid()[i].length; j++){
+        //         System.out.print(grid.getDeltaGrid()[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
 
-        for(int i = 0; i < grid.getDangerGrid().length; i++){
-            for(int j = 0; j < grid.getDangerGrid()[i].length; j++){
-                System.out.print(grid.getDangerGrid()[i][j] + " ");
-            }
-            System.out.println();
-        }
+        // for(int i = 0; i < grid.getDangerGrid().length; i++){
+        //     for(int j = 0; j < grid.getDangerGrid()[i].length; j++){
+        //         System.out.print(grid.getDangerGrid()[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
+
+        System.out.println(grid.toString());
 
     }
 
@@ -93,6 +99,8 @@ public class GridMonitor implements GridMonitorInterface {
 
         
         fileScan.close();
+
+        
 
     }
 
@@ -250,14 +258,16 @@ public class GridMonitor implements GridMonitorInterface {
      */
     @Override
     public String toString() {
+        String gridLine = "Base Grid: \n";
 
-        // for(int i = 0; i < getBaseGrid().length; i++){
-        //     String gridLine = new String();
-        //     for(int j = 0; j < getBaseGrid()[i].length; j++){
-        //         gridLine = getBaseGrid()[i][j] + " ";
-        //     }
-        //      gridLine + "\n";
-        // }
+        // gridLine += ;
+
+        for(int i = 0; i < getBaseGrid().length; i++){
+            for(int j = 0; j < getBaseGrid()[i].length; j++){
+                gridLine += getBaseGrid()[i][j] + " ";
+            }
+        }
+        return gridLine;
 
         // for(int i = 0; i < grid.getSurroundingAvgGrid().length; i++){
         //     for(int j = 0; j < grid.getSurroundingAvgGrid()[i].length; j++){
@@ -273,7 +283,7 @@ public class GridMonitor implements GridMonitorInterface {
         //     System.out.println();
         // }
 
-        return super.toString();
+        // return super.toString();
     }
 
 }
